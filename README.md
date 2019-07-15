@@ -7,7 +7,7 @@ The repository covers all the basic needs to get GraphQL setup for both server s
 The following are the dependencies needed to have the client-side working smoothly. They can all be installed via `npm install <dependency_name>`.
 
 - apollo-client
-- apollo-link-
+- apollo-link
 - apollo-link-http
 - apollo-link-ws
 - apollo-utilities
