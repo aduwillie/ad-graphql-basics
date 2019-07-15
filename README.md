@@ -2,6 +2,28 @@
 
 The repository covers all the basic needs to get GraphQL setup for both server side (hapi.js) and client side.
 
+### Dependencies
+
+The following are the dependencies needed to have the client-side working smoothly. They can all be installed via `npm install <dependency_name>`.
+
+- apollo-client
+- apollo-link-
+- apollo-link-http
+- apollo-link-ws
+- apollo-utilities
+- subscriptions-transport-ws
+- graphql-tag
+
+Also, webpack is used to help with bundling of the client side javascript code. It should be noted the loaders are essential to having webpack work as intended. The webpack config is as follows:
+
+For the server-side of the implementation the dependencies are as follows:
+
+- @hapi/hapi
+- @hapi/inert
+- apollo-server-hapi
+
+The `package.json` file can always be checked to confirm working versions and any updates.
+
 ## Server
 
 Hapi.js version 18 is the web framework behind this project. Its fast, clean and easy to understand. The core data model is a book as can be seen in the library. Since data persistence is not of concern in this project, hardcoded copies are used. This is just for study purposes and so I cannot guarantee the correctness of the relationship between a book and an author.
@@ -78,19 +100,6 @@ This project uses the `apollo-server-hapi` package in order to ensure that smoot
 ## Client
 
 The client side is intended to cover a bunch of client-side frameworks. It is to be noted that the interaction of a queries, mutations and subscriptions can be treated separately i.e. the query and mutation interactions can be safely conducted via http whereas the subscription interactions are best server via a bi-directional medium such as websockets.
-
-### Dependencies
-
-The following are the dependencies needed to have the client side working smoothly. They can all be installed via `npm install <dependency_name>`.
-
-- apollo-client
-- apollo-link-
-- apollo-link-http
-- apollo-link-ws
-- apollo-utilities
-- subscriptions-transport-ws
-
-Also, webpack is used to help with bundling of the client side javascript code. It should be noted the loaders are essential to having webpack work as intended. The webpack config is as follows: 
 
 ```
 const path = require('path');

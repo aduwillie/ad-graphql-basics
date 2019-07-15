@@ -1,6 +1,5 @@
 const Hapi = require('@hapi/hapi');
 const Inert = require('@hapi/inert');
-// const Nes = require('@hapi/nes')
 const path = require('path');
 
 const homeRoute = require('../lib/routes/home');
@@ -24,7 +23,6 @@ const startServer = async () => {
 
     await server.register([
         Inert,
-        // Nes,
         {
             plugin: require('../plugins/graphql'),
         }
