@@ -89,8 +89,6 @@ export default class BookService {
             `,
             variables: {},
         });
-
-        this.bookAddedSubscription.subscribe((data) => console.log('from service, subscription:', data));
         return this.bookAddedSubscription;
     }
 }

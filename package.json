@@ -7,6 +7,7 @@
     "build": "./node_modules/.bin/webpack",
     "build:w": "./node_modules/.bin/webpack --watch",
     "dev": "nodemon src/backend/server/index.js --watch src/backend",
+    "prestart": "npm run build",
     "start": "node src/backend/server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,10 +19,13 @@
     "@hapi/inert": "^5.2.1",
     "@hapi/nes": "^11.2.0",
     "angular": "^1.7.8",
-    "apollo-boost": "^0.4.3",
     "apollo-cache-inmemory": "^1.6.2",
+    "apollo-client": "^2.6.3",
+    "apollo-link": "^1.2.12",
+    "apollo-link-http": "^1.5.15",
     "apollo-link-ws": "^1.0.18",
     "apollo-server-hapi": "^2.6.8",
+    "apollo-utilities": "^1.3.2",
     "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
     "subscriptions-transport-ws": "^0.9.16"
