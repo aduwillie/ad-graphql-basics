@@ -1,0 +1,19 @@
+<div>
+    <h1>Book List</h1>
+    <div>
+        <span>
+            Total Books: {{ $ctrl.books.length }}
+        </span>
+    </div>
+    <ul>
+        <li ng-repeat="book in $ctrl.books">
+            {{ book.author }} | {{ book.title }}
+        </li>
+    </ul>
+    <h1>Add Book</h1>
+    <form>
+        <input type="text" placeholder="Name of Author" ng-model="$ctrl.bookModel.author">
+        <input type="text" placeholder="Name of Book Title" ng-model="$ctrl.bookModel.title">
+        <input type="submit" value="Add Book" ng-disabled="!$ctrl.bookModel.title || !$ctrl.bookModel.author" ng-click="$ctrl.addBook()">
+    </form>
+</div>
